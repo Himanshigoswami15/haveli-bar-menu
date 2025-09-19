@@ -6,18 +6,20 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
+  const Icon = item.image;
+
   return (
-    <div className="grid grid-cols-6 gap-2 md:gap-4 items-start text-stone-300 py-3 border-b border-stone-700/50 last:border-none">
-      <div className="col-span-4 md:col-span-3">
-        <p className="text-lg text-amber-100">{item.name}</p>
-      </div>
-      
-      <div className="col-span-1 text-right">
-        <p className="text-lg">{item.bottlePrice ? `₹${item.bottlePrice}` : '-'}</p>
-      </div>
-      
-      <div className="col-span-1 text-right">
-        <p className="text-lg">{item.glassPrice ? `₹${item.glassPrice}` : '-'}</p>
+    <div className="flex items-center gap-4 text-stone-300 py-4 border-b border-stone-800/60 last:border-none">
+      {Icon && (
+        <div className="flex-shrink-0">
+          <Icon className="w-7 h-7 text-amber-200/60" />
+        </div>
+      )}
+      <p className="text-lg text-amber-100 flex-shrink min-w-0">{item.name}</p>
+      <div className="flex-grow mx-2 border-b border-dotted border-stone-600/70"></div>
+      <div className="flex items-baseline gap-4 flex-shrink-0">
+        <p className="w-16 text-lg text-right">{item.bottlePrice ? `₹${item.bottlePrice}` : '-'}</p>
+        <p className="w-16 text-lg text-right">{item.glassPrice ? `₹${item.glassPrice}` : '-'}</p>
       </div>
     </div>
   );
