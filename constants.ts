@@ -25,7 +25,7 @@ export const MENU_DATA: MenuCategory[] = [
     items: [
       { name: 'Black-Dog (8 Years)', bottlePrice: 3000, glassPrice: 250, glassSize: 60, image: WhiskyGlassIcon },
       { name: 'Teacher\'s', bottlePrice: 2900, glassPrice: 250, glassSize: 60, image: WhiskyGlassIcon },
-      { name: '100 Pipers', bottlePrice: 32900, glassPrice: 250, glassSize: 60, image: WhiskyGlassIcon },
+      { name: '100 Pipers', bottlePrice: 3200, glassPrice: 250, glassSize: 60, image: WhiskyGlassIcon },
       { name: 'Blender\'s Pride', bottlePrice: 1900, glassPrice: 160, glassSize: 60, image: WhiskyGlassIcon },
     ],
   },
