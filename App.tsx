@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { MENU_DATA } from './constants';
 import MenuCategory from './components/MenuCategory';
-import { PhoneIcon, EmailIcon, WebsiteIcon, BottleSilhouettes } from './components/IconComponents';
+import { PhoneIcon, EmailIcon, WebsiteIcon, InstagramIcon, BottleSilhouettes } from './components/IconComponents';
 
 const App: React.FC = () => {
   return (
@@ -61,8 +62,24 @@ const App: React.FC = () => {
                 <span>www.thehaveliresorts.com</span>
               </a>
            </div>
-           <p>&copy; {new Date().getFullYear()} THE HAVELI RESORT. All rights reserved.</p>
-           <p className="text-sm mt-1">Experience royal hospitality.</p>
+           
+           <div className="mb-8">
+             <p className="font-serif-display italic text-lg text-amber-100/70 mb-1">Experience royal hospitality.</p>
+             <p className="text-sm">&copy; {new Date().getFullYear()} THE HAVELI RESORT. All rights reserved.</p>
+           </div>
+
+           <div className="mt-8 pt-8 border-t border-stone-800/50 flex flex-col items-center gap-3">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-stone-500 font-medium">Digital Experience Crafted By</p>
+              <a 
+                href="https://www.instagram.com/qreativemenus" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-amber-400/80 hover:text-amber-300 transition-all duration-300 group px-4 py-2 border border-transparent hover:border-amber-500/20 hover:bg-amber-500/5 rounded-full"
+              >
+                <InstagramIcon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                <span className="font-bold tracking-widest text-sm">@QREATIVEMENUS</span>
+              </a>
+           </div>
         </footer>
       </main>
     </div>
